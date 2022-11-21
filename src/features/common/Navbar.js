@@ -11,7 +11,7 @@ const Navbar = () => {
     console.log("logout");
     localStorage.removeItem("token");
     setAuthState({ type: "LOGOUT" });
-    navigate("na/products");
+    navigate("/na/products");
   };
 
   return (
@@ -26,7 +26,7 @@ const Navbar = () => {
               <button
                 type="button"
                 className="btn btn-primary px-3 me-2"
-                onClick={() => navigate("na/pastorders")}
+                onClick={() => navigate("/na/pastorders")}
               >
                 Order History
               </button>
@@ -43,14 +43,14 @@ const Navbar = () => {
               <button
                 type="button"
                 className="btn btn-link px-3 me-2"
-                onClick={() => navigate("na/login")}
+                onClick={() => navigate("/na/login")}
               >
                 Login
               </button>
               <button
                 type="button"
                 className="btn btn-primary me-3"
-                onClick={() => navigate("na/signup")}
+                onClick={() => navigate("/na/signup")}
               >
                 Sign up for free
               </button>

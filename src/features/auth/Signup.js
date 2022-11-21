@@ -58,7 +58,7 @@ const SignUp = () => {
       console.log({ status, statusText, data });
       if (status >= 200 && status <= 300) {
         if (data.status === "OK") {
-          navigate("na/login");
+          navigate("/na/login");
         } else {
           setError(data.msg);
         }
@@ -131,7 +131,7 @@ const SignUp = () => {
         <button
           type="button"
           className="btn btn-link mb-4"
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/na/login")}
         >
           Already Registered? SignIn
         </button>

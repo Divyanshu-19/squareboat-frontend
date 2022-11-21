@@ -41,7 +41,7 @@ const Login = () => {
       console.log({ status, statusText, data });
       if (status === 200) {
         localStorage.setItem("token", data.result.token);
-        navigate("na/products");
+        navigate("/na/products");
       } else {
         setError("Error fetching data from server. Please try again later...");
       }
@@ -99,7 +99,7 @@ const Login = () => {
         <button
           type="button"
           className="btn btn-link mb-4"
-          onClick={() => navigate("/signup")}
+          onClick={() => navigate("/na/signup")}
         >
           Not Registered? SignUp..
         </button>

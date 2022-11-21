@@ -5,7 +5,7 @@ const ProductCard = ({ id, name, description, price, image }) => {
   const navigate = useNavigate();
 
   const handleProductSelect = () => {
-    navigate(`na/products/${id}`);
+    navigate(`/na/products/${id}`);
   };
 
   return (
