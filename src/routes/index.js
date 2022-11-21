@@ -36,14 +36,14 @@ const BaseRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Navbar />}>
+      <Route path="/na" element={<Navbar />}>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Singup />} />
         <Route path="products" element={<ProductCatalog />} />
         <Route path="products/:id" element={<ProductDescription />} />
         <Route path="pastorders" element={<OrderSummary />} />
       </Route>
-      <Route path="*" element={<Navigate to="/products" replace />} />
+      <Route path="*" element={<Navigate to="/na/products" replace />} />
     </Routes>
   );
 };
