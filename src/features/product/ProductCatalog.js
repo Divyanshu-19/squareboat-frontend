@@ -19,13 +19,12 @@ const ProductCatalog = () => {
 
   return (
     <div>
-      Product Catalog
-      <div class="container-xl text-center px-5">
-        <div class="row">
+      <div className="container-xl text-center px-5 mt-5">
+        <div className="row">
           {products
             ? products.map(({ _id, name, description, image, price }) => {
                 return (
-                  <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 pb-5">
+                  <div className="col-xs-12 col-md-6 col-lg-4 col-xl-3 pb-5">
                     <ProductCard
                       key={_id}
                       id={_id}

@@ -9,6 +9,7 @@ import ProductDescription from "../features/product/ProductDescription";
 import OrderSummary from "../features/order/OrderSummary";
 import { useAuth } from "../context/AuthContext";
 import config from "../config/config";
+import Navbar from "../features/common/Navbar";
 
 const BaseRoutes = () => {
   const { setAuthState } = useAuth();
@@ -35,11 +36,13 @@ const BaseRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Singup />} />
-      <Route path="/products" element={<ProductCatalog />} />
-      <Route path="/products/:id" element={<ProductDescription />} />
-      <Route path="/pastorders" element={<OrderSummary />} />
+      <Route path="/" element={<Navbar />}>
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Singup />} />
+        <Route path="products" element={<ProductCatalog />} />
+        <Route path="products/:id" element={<ProductDescription />} />
+        <Route path="pastorders" element={<OrderSummary />} />
+      </Route>
       <Route path="*" element={<Navigate to="/products" replace />} />
     </Routes>
   );

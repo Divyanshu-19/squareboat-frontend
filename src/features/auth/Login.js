@@ -39,9 +39,9 @@ const Login = () => {
         }
       );
       console.log({ status, statusText, data });
-      if (status === 200 && statusText === "OK") {
+      if (status === 200) {
         localStorage.setItem("token", data.result.token);
-        navigate("/home");
+        navigate("/products");
       } else {
         setError("Error fetching data from server. Please try again later...");
       }
