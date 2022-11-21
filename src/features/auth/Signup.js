@@ -58,7 +58,7 @@ const SignUp = () => {
       console.log({ status, statusText, data });
       if (status >= 200 && status <= 300) {
         if (data.status === "OK") {
-          navigate("/login");
+          navigate("na/login");
         } else {
           setError(data.msg);
         }
